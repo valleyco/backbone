@@ -1,0 +1,7 @@
+#!/bin/bash
+CONTAINER_NAME=plain_nginx
+if [ `docker container ls  --format 'table {{.Names}}' |grep $CONTAINER_NAME` ]; then
+  docker container stop $CONTAINER_NAME
+  exit
+fi
+echo "Container $CONTAINER_NAME is not runing"
