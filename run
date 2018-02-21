@@ -9,4 +9,4 @@ if [ `docker container ls -a --format 'table {{.Names}}' | grep $CONTAINER_NAME`
 	exit
 fi
 
-docker run --name $CONTAINER_NAME -v `pwd`:/usr/share/nginx/html:ro -d -p 80:80 nginx
+docker run --name $CONTAINER_NAME -v `pwd`/public:/usr/share/nginx/html:ro -d -p 80:80 nginx
