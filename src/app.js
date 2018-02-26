@@ -3,5 +3,5 @@ window._=require("underscore");
 require("backbone");
 require("./todos");
 require("./vendor/backbone.localStorage");
-require("./vendor/json2");
 import './css/todos.css';
+JSON2 = require('JSON2');
