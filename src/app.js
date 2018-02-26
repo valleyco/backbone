@@ -4,4 +4,4 @@ require("backbone");
 require("./todos");
 require("./vendor/backbone.localStorage");
 import './css/todos.css';
-JSON2 = require('JSON2');
+var JSON2 = require('JSON2');
