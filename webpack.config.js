@@ -11,13 +11,18 @@ module.exports = {
     rules: [{
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader"]
+          use: [ "css-loader", 'resolve-url-loader']
         })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use: {
+          loader: 'url-loader',
+          options:{
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
       }
     ]
   },
