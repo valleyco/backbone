@@ -3,5 +3,6 @@ window._=require("underscore");
 require("backbone");
 require("./todos");
 require("./vendor/backbone.localStorage");
-import './css/todos.css';
+window.Handlebars = require("handlebars");
 var JSON2 = require('JSON2');
+import './css/todos.css';
