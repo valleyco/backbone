@@ -1,8 +1,8 @@
-window.$=require("jquery");
-window._=require("underscore");
+window.$ = require("jquery");
 require("backbone");
-require("./todos");
-require("./vendor/backbone.localStorage");
 window.Handlebars = require("handlebars");
 var JSON2 = require('JSON2');
-import './css/todos.css';
+var AppView = require("./todos");
+$(function() {
+  var App = new AppView;
+});
