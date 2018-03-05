@@ -9,7 +9,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      handlebars: 'handlebars/dist/handlebars.min.js'
+      handlebars: 'handlebars/dist/handlebars.runtime.min.js'
     }
   },
   module: {
